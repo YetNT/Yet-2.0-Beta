@@ -1,0 +1,6 @@
+# node
+node_modules/
+h.js
+replit.nix
+.replit
+pack-lock.json
