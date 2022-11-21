@@ -1,0 +1,51 @@
+module.exports = [{
+  name:"blacklist add",
+  code:`
+  $description[1;This user has been blacklisted for : \`$replaceText[$message;$message[1] $splitText[2];;1]\`
+Date of blacklist $day/$month/$year
+$if[$isUserDMEnabled[$message[1]]==false; **Error : \`I could not DM them, that they have been added, becuase they have their DMs closed\`**;]]
+$blacklist[user;$message[1]]
+$title[1;$username[$message[1]] has been Blacklisted!]
+
+$setGlobalUserVar[blacklistReason;$replaceText[$message;$message[1] $message[2];;1];$message[2]]
+$setGlobalUserVar[blacklistTime;$day/$month/$year;$message[2]]
+
+$textSplit[$message;|]
+
+$onlyIf[$getGlobalUserVar[blacklist;$message[2]]==0;:x: This user has already been blacklisted!]
+$onlyIf[$userExists[$message[1]]==true;:x: That user does not exist!]
+
+$color[1;#FF0000]
+
+
+
+$argsCheck[>2;:x: Invalid Arguments! (**y!blacklist add/remove <userID> | (reason)**)]
+$onlyIf[$authorID==671549251024584725;You can not use this command! Error Code : \`1\`]
+
+  `
+},{
+  name: "blacklist remove",
+  aliases: "bl",
+  code: `
+$description[1;This user can use any command now.
+$if[$isUserDMEnabled[$message[2]]==false; **Error : \`I could not DM them, that they have been removed, becuase they have their DMs closed\`**;]]
+$setGlobalUserVar[blacklist;$sub[$getGlobalUserVar[blacklist;$message[2]];1];$message[2]]
+$setGlobalUserVar[blacklistReason;;$message[2]]
+$setGlobalUserVar[blacklistTime;;$message[2]]
+$title[1;$username[$message[2]] has been removed from the Blacklist]
+$onlyIf[$getGlobalUserVar[blacklist;$message[2]]==1;:x: This user has not been blacklisted!]
+$onlyIf[$userExists[$message[2]]==true;:x: That user does not exist!]
+$color[1;#FF0000]
+
+
+
+$argsCheck[>2;:x: Invalid Arguments! (**y!blacklist add/remove <userID> (reason)**)]
+$onlyIf[$authorID==671549251024584725;You can not use this command! Error Code : \`1\`]`
+},{
+  name:"testi",
+  code:`
+Yes, you're not blacklisted!
+  
+  $blacklistError[user;Hmm, it seems like you're blacklisted.]
+  `
+}]
