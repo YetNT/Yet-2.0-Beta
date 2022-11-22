@@ -321,12 +321,7 @@ module.exports = [
           {description:
             $randomText[
               Your Notifs are empty :pensive:;
-              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];400];$authorID]
-              $dm[$authorID;
-                {newEmbed:
-                  {description:Nice you got $coin**400**}
-                }
-              ] Go check your actual notifications.;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];400];$authorID] Discord mod dmed you $coin**400** Don't ask how that works.;
               No dms, you swear you heard the ping but nothing is there.
             ]
           }
