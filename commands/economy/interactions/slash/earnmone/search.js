@@ -262,11 +262,11 @@ module.exports = [
           {description:
             You stick your hand in the vending machine hoping to find money somewhere, you dig deeper and deeper, until you end up looking like that blue guy from that one show;
             $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[1;1500]];$authorID] You gave the vending machine a $randomText[colk;spright;popsi;fahntah] and it gave you back $coin**$random[1;1500]**;
-            ;
-            ;
-            ;
-            ;
-            
+            You take apart a random vending machine and it starts beeping. Oh well no money :(;
+            place;
+            place;
+            place;
+            place
           }
           {color:#6495ED}
         }
