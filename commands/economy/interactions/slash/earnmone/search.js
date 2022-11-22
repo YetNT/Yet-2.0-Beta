@@ -260,12 +260,14 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            You stick your hand in the vending machine hoping to find money somewhere, you dig deeper and deeper, until you end up looking like that blue guy from that one show;
-            $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[1;1500]];$authorID] You gave the vending machine a $randomText[colk;spright;popsi;fahntah] and it gave you back $coin**$random[1;1500]**;
-            You take apart a random vending machine and it starts beeping alerting the manager. Oh well no money :(;
-            You couldn't find a vending machine in your area.;
-            $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[2;239]];$authorID] Someone dropped their coins infront of the vending machine. Idk how this happens but your evil for picking it up and keeping it. $coin**$random[2;239];
-            $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];20];$authorID] $setGlobalUserVar[milk;$sum[$getGlobalUserVar[milk;$authorID];1];$authorID] You put $coin**20** into the vending machine and it gives back **1 Milk**!
+            $randomText[
+              You stick your hand in the vending machine hoping to find money somewhere, you dig deeper and deeper, until you end up looking like that blue guy from that one show;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[1;1500]];$authorID] You gave the vending machine a $randomText[colk;spright;popsi;fahntah] and it gave you back $coin**$random[1;1500]**;
+              You take apart a random vending machine and it starts beeping alerting the manager. Oh well no money :pensive:;
+              You couldn't find a vending machine in your area.;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[2;239]];$authorID] Someone dropped their coins infront of the vending machine. Idk how this happens but your evil for picking it up and keeping it. $coin**$random[2;239];
+              $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];20];$authorID] $setGlobalUserVar[milk;$sum[$getGlobalUserVar[milk;$authorID];1];$authorID] You put $coin**20** into the vending machine and it gives back **1 Milk**!
+            ]
           }
           {color:#6495ED}
         }
@@ -289,9 +291,11 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            You went shopping to find a till to rob, found one, annnddd.... nothing.;
-            $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;10000]];$authorID] The teller went to the bathroom and you took the chance to go to the till. You found $coin**$random[100;10000]**;
-            The teller went tot he bathroom and you took the chance to go to the till. Infact everybody did! Before you could even walk a step closer to the till, all of it's contents are gone.
+            $randomText[
+              You went shopping to find a till to rob, found one, annnddd.... nothing.;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;10000]];$authorID] The teller went to the bathroom and you took the chance to go to the till. You found $coin**$random[100;10000]**;
+              The teller went tot he bathroom and you took the chance to go to the till. Infact everybody did! Before you could even walk a step closer to the till, all of it's contents are gone.
+            ]
           }
           {color:#6495ED}
         }
@@ -315,14 +319,16 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            Your Notifs are empty :(;
-            $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];400];$authorID]
-            $dm[$authorID;
-              {newEmbed:
-                {description:Nice you got $coin**400**}
-              }
-            ] Go check your actual notifications.;
-            No dms, you swear you heard the ping but nothing is there.
+            $randomText[
+              Your Notifs are empty :pensive:;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];400];$authorID]
+              $dm[$authorID;
+                {newEmbed:
+                  {description:Nice you got $coin**400**}
+                }
+              ] Go check your actual notifications.;
+              No dms, you swear you heard the ping but nothing is there.
+            ]
           }
           {color:#6495ED}
         }
