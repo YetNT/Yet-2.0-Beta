@@ -265,7 +265,7 @@ module.exports = [
               $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[1;1500]];$authorID] You gave the vending machine a $randomText[colk;spright;popsi;fahntah] and it gave you back $coin**$random[1;1500]**;
               You take apart a random vending machine and it starts beeping alerting the manager. Oh well no money :pensive:;
               You couldn't find a vending machine in your area.;
-              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[2;239]];$authorID] Someone dropped their coins infront of the vending machine. Idk how this happens but your evil for picking it up and keeping it. $coin**$random[2;239];
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[2;239]];$authorID] Someone dropped their coinz infront of the vending machine. Idk how this happens but your evil for picking it up and keeping it. $coin**$random[2;239];
               $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];20];$authorID] $setGlobalUserVar[milk;$sum[$getGlobalUserVar[milk;$authorID];1];$authorID] You put $coin**20** into the vending machine and it gives back **1 Milk**!
             ]
           }
@@ -286,7 +286,6 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
@@ -314,7 +313,6 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
@@ -342,11 +340,14 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
+          {description:
+            $randomText[
+              Lol rip no coinz, but you can join this server for daily giveaways 
+            ]
+          }
           {color:#6495ED}
         }
       ]
