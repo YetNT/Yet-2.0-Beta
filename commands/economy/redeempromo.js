@@ -25,9 +25,20 @@ module.exports = [{
   GG a valid promocode
   **+6900**$coin
   Dev Message : \`an updae\`:skull: ||\`You probably didn't claim this on a new update, but it's fine\`||
-  $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorId];1];$authorId]
+  $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorId];6900];$authorId]
   $setGlobalUserVar[newUpdate;claimed;$authorId]
   $onlyIf[$getGlobalUserVar[newUpdate;$authorId]==unclaimed;You already claimed this noob]
+  `
+},{
+  name:"redeempromo DvjFMy9fKU",
+  code:`
+  GG a valid promocode
+  +$coin**10000**
+  Dev Message : \`Thanks for joining the server, really appreciated :D\`
+  $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorId];10000];$authorId]
+  $setGlobalUserVar[DvjFMy9fKU;claimed;$authorId]
+  $onlyIf[$getGlobalUserVar[DvjFMy9fKU;$authorId]==unclaimed;You already claimed this noob]
+  $onlyIf[($channelId==796048687867625492)&&($guildId==794139215612870697);Incorrect channel/server.]
   `
 }]
 

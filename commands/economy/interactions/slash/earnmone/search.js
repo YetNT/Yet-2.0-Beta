@@ -24,11 +24,11 @@ module.exports = [
                   "name" : "Backrooms",
                   "value" : "backrooms"
                 },{
-                  "name" : "GGmail Inbox",
+                  "name" : "Gmail Inbox",
                   "value" : "gmail"
                 },{
-                  "name" : "Laundremat",
-                  "value" : "laundremat"
+                  "name" : "Laundromat",
+                  "value" : "laundromat"
                 },{
                   "name" : "Vending Machine",
                   "value" : "vending"
@@ -36,14 +36,14 @@ module.exports = [
                   "name" : "Till at the shop",
                   "value" : "till"
                 },{
-                  "name" : "Diskord Notifications",
+                  "name" : "Discord Notifications",
                   "value" : "notifs"
                 },{
-                  "name" : "$username's Server",
+                  "name" : "Yet's Server",
                   "value" : "server_ad"
                 },{
-                  "name" : "Googel ToS",
-                  "value" : "googleTOS"
+                  "name" : "Microscopic world",
+                  "value" : "mw"
                 },{
                   "name" : "School Campus",
                   "value" : "school"
@@ -51,7 +51,7 @@ module.exports = [
                   "name" : "Fridge",
                   "value" : "fridge"
                 },{
-                  "name" : "#WtitterHastag",
+                  "name" : "#TwitterHastag",
                   "value" : "twitter"
                 },{
                   "name" : "Trash",
@@ -69,7 +69,7 @@ module.exports = [
                   "name" : "Black Hole",
                   "value" : "black"
                 },{
-                  "name" : "Diskord Developer Documentation",
+                  "name" : "Discord Developer Documentation",
                   "value" : "ddd"
                 },{
                   "name" : "Pencil case",
@@ -94,6 +94,7 @@ module.exports = [
           {title:$username's Search Results}
           {description:You searched your bedroom and found **$random[50;100]**:gem: !}
           {color:#6495ED}
+          {footer:$username searched their bedroom}
         }
       ]
       
@@ -123,6 +124,7 @@ module.exports = [
             ]  
           }
           {color:#6495ED}
+          {footer:$username searched their bathroom}
         }
       ]
       
@@ -151,6 +153,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched outside}
         }
       ]
       
@@ -182,6 +185,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched the backrooms}
         }
       ]
       
@@ -204,13 +208,14 @@ module.exports = [
           {description:
             $randomText[
               Your GGmail is dead. Lol;
-              $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];50];$authorID] You found an ad to earn free money. You hesitate at first but click it anyways and it was real! You just... wait... the scammer has your bank account, and took out $coin**50**.;  
+              $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];50];$authorID] You found an ad to earn free money. You hesitate at first but click it anyways and it was real! You just... wait... the scammer has your bank account, and took out $coin**50**. $badgeGetNormal[badgen;var;029494];  
               Aint no way you checking your ggmail bro :skull:;
               $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[50;100]];$authorID] You look into the spam folder to find $coin**$random[50;100]**. How?;
               Searched and found nothing. Might as well get Email
             ]  
           }
           {color:#6495ED}
+          {footer:$username searched their Gmail inbox}
         }
       ]
       
@@ -240,6 +245,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched a laundromat}
         }
       ]
       
@@ -249,7 +255,7 @@ module.exports = [
           "ephemeral":true,"options":{"interaction":true}
         }
       ]
-      $onlyIf[$slashOption[search]==laundremat;]
+      $onlyIf[$slashOption[search]==laundromat;]
     `
   },{ //vending
     name:"search",
@@ -270,6 +276,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched a vending machine}
         }
       ]
       
@@ -297,6 +304,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched a till at a shop}
         }
       ]
       
@@ -324,6 +332,7 @@ module.exports = [
             ]
           }
           {color:#6495ED}
+          {footer:$username searched their discord notifications}
         }
       ]
       
@@ -345,10 +354,13 @@ module.exports = [
           {title:$username's Search Results}
           {description:
             $randomText[
-              Lol rip no coinz, but you can join this server for daily giveaways 
+              Lol rip no coinz, but you can [join this server](https://discord.gg/DvjFMy9fKU) for daily giveaways;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[10;400]];$authorID] You search around general for some coins. Nobody is chatting but you did find $coin**$random[10;400]**;
+              No coins here, but did you know that you can get $coin**10000** by using a promocode hidden in <#796048687867625492> which is in [this server?](https://discord.gg/DvjFMy9fKU);
             ]
           }
           {color:#6495ED}
+          {footer:$username searched yet's server}
         }
       ]
       
@@ -360,17 +372,24 @@ module.exports = [
       ]
       $onlyIf[$slashOption[search]==server_ad;]
     `
-  },{ //googleTOS
+  },{ //microscopic world
     name:"search",
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
+          {description:
+            $randomText[
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;900000]];$authorID] You scouted the entire world of microorganisms, you found a total of $coin**$random[100;900000]**. Worth it.;
+              Nothing in the microscopic world. weird tf;
+              You search the microscopic world and find no coins, but you find Ant Man!;
+              You find a coin in a microorganism's singular cell. Nice? $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];1];$authorID]
+            ]
+          }
           {color:#6495ED}
+          {footer:$username searched the microscopic world}
         }
       ]
       
@@ -380,7 +399,7 @@ module.exports = [
           "ephemeral":true,"options":{"interaction":true}
         }
       ]
-      $onlyIf[$slashOption[search]==googleTOS;]
+      $onlyIf[$slashOption[search]==mw;]
     `
   },{ //school
     name:"search",
@@ -391,8 +410,15 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
+          {description:
+            $randomText[
+              You find ;
+              ;
+              ;
+            ]
+          }
           {color:#6495ED}
+          {footer:$username searched $random[their;a] school campus}
         }
       ]
       
@@ -414,7 +440,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -436,7 +462,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -458,7 +484,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -480,7 +506,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -502,7 +528,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -524,7 +550,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -546,7 +572,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -568,7 +594,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -590,7 +616,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       
@@ -612,7 +638,7 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:}
-          {color:#6495ED}
+          {color:#6495ED}{footer:$username searched }
         }
       ]
       

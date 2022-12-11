@@ -4,9 +4,13 @@ module.exports = {
   money: 0,
   bank: 0,
   premium: 0,
-  blacklist: 0,
+
+  //blacklist
+  
+  blacklist: false,
   blacklistTime: " ",
   blacklistReason: " ",
+  blacklistBy: 0,
 
 
   none: 0,
@@ -28,7 +32,8 @@ module.exports = {
   snBadge: 0,
   premium: 0,
   friendBadge: 0,
-
+  gullible: 0,
+  
   mod: 0,
 
   // PACKS
@@ -67,6 +72,7 @@ module.exports = {
 
   thisIsNotAPromocode: "unclaimed",
   newUpdate: "unclaimed",
+  DvjFMy9fKU: "unclaimed",
 
   // select
 

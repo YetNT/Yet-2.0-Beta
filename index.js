@@ -26,6 +26,34 @@ bot.functionManager.createFunction({
   code : `<:coinz_yet20:887529170316460043>`
 })
 
+bot.functionManager.createFunction({
+  name : '$badgeGetNonEph',
+  params: ["badgeEmojiName","badgeVar","badgeEmojiID"],
+  type : 'aoi.js',
+  code : 
+    `
+      $interactionReply[;
+        {newEmbed:
+          {title:Achievement!}
+          {description:you got achivement. {badgeEmojiName},{badgeVar},{badgeEmojiID}}
+        }
+      ]
+    `
+})
+bot.functionManager.createFunction({
+  name : '$badgeGetNormal',
+  params: ["badgeEmojiName","badgeVar","badgeEmojiID"],
+  type : 'aoi.js',
+  code : 
+    `
+      $sendMessage[
+        {
+          "embeds" : "{newEmbed:{title:Achievement!}{description:you got achivement. {badgeEmojiName},{badgeVar},{badgeEmojiID}}}"
+        }
+      ]
+    `
+})
+
 const loader = new aoijs.LoadCommands(bot);
 loader.load(bot.cmd,'./commands/')
 const vars = require('./variables.js')
