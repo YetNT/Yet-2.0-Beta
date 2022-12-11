@@ -10,7 +10,7 @@ module.exports = {
   blacklist: false,
   blacklistTime: " ",
   blacklistReason: " ",
-  blacklistBy: 0,
+  blacklistBy: " ",
 
 
   none: 0,
