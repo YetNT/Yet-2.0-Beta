@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "aoi.js": "^6.0.0",
+    "aoi.js": "^6.0.1",
     "express": "^4.18.2"
   }
 }

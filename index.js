@@ -88,7 +88,15 @@ bot.status({
 })
 
 bot.loopCommand({
-code: `$editMessage[1015333980725313558;$uptime\ncpu : $cpu%\nram : $ram\nping : $pingms;920947757613735966] edited message in <#920947757613735966> $deleteIn[10s]`,
+code: 
+  `
+    $editMessage[
+      1015333980725313558;
+      $uptime\ncpu : $cpu%\nram : $ram\nping : $pingms;
+      920947757613735966
+    ]
+    edited message in <#920947757613735966> $deleteIn[10s]
+  `,
 channel: "859877592806850560",
 executeOnStartup: true,
 every: 1800000
