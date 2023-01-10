@@ -28,7 +28,7 @@ bot.functionManager.createFunction({
 
 bot.functionManager.createFunction({
   name : '$badgeGetNonEph',
-  params: ["badgeEmojiName","badgeVar","badgeEmojiID"],
+  params: ["badgeEmojiName", "badgeVar", "badgeEmojiID"],
   type : 'aoi.js',
   code : 
     `

@@ -8,7 +8,7 @@ module.exports = [
             "name": "search",
             "description": "Where would you like to search?",
             "required": true,
-            "type": "STRING",
+            "type": 3,
             "choices" : 
               [
                 {
@@ -208,7 +208,7 @@ module.exports = [
           {description:
             $randomText[
               Your GGmail is dead. Lol;
-              $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];50];$authorID] You found an ad to earn free money. You hesitate at first but click it anyways and it was real! You just... wait... the scammer has your bank account, and took out $coin**50**. $badgeGetNormal[badgen;var;029494];  
+              $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];50];$authorID] You found an ad to earn free money. You hesitate at first but click it anyways and it was real! You just... wait... the scammer has your bank account, and took out $coin**50**.;  
               Aint no way you checking your ggmail bro :skull:;
               $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[50;100]];$authorID] You look into the spam folder to find $coin**$random[50;100]**. How?;
               Searched and found nothing. Might as well get Email
@@ -406,19 +406,18 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
           {description:
             $randomText[
-              You find ;
-              ;
-              ;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;400]];$authorID] You find $coin**$random[100;400]** in the bathroom. Cool?;
+              You attempted to search for coins in the staffroom, but for some reason you did this while a teacher was inside drinking $randomText[his/her] coffee. You were kicked out;
+              No luck, anyways why would there be coins at school? :nerd:
             ]
           }
           {color:#6495ED}
-          {footer:$username searched $random[their;a] school campus}
+          {footer:$username searched $randomText[their;a] school campus}
         }
       ]
       
@@ -439,8 +438,15 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              $setGlobaUserVar[egg;$sum[$getGlobalUserVar[egg;$authorID];$random[2:12]];$authorID]No coins in the fridge, although there isn't coins you did find $random[2;12] eggs;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched the fridge}
         }
       ]
       

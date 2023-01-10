@@ -12,7 +12,8 @@ module.exports = {
   blacklistReason: " ",
   blacklistBy: " ",
 
-
+  
+  
   none: 0,
   yetMouse: 0,
   floMathTest: 0,
