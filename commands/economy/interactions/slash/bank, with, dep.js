@@ -40,9 +40,8 @@ module.exports = [
     name:"bank",// deposit
     type:"interaction",
     prototype:"slash",
-    $if:"v4",
     code:`
-      $if[$isNumber[$slashOption[amount]]==false]
+      $if[$isNumber[$slashOption[amount]]==false;
 
         
         $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];$getGlobalUserVar[money;$authorID]];$authorID]
@@ -55,10 +54,10 @@ module.exports = [
             {footer:bank is powr}
             {image:https://akket.com/wp-content/uploads/2018/08/Bank-voronezh-52.jpg}
           }
-        ]
+        ;;;everyone]
 
         
-      $else
+      ;
 
       
         $setGlobalUserVar[bank;$sum[$getGlobalUserVar[bank;$authorID];$slashOption[amount]]]
@@ -71,22 +70,24 @@ module.exports = [
             {footer:bank is powr}
             {image:https://akket.com/wp-content/uploads/2018/08/Bank-voronezh-52.jpg}
           }
-        ]
+        ;;;everyone]
         $onlyIf[$getGlobalUserVar[money;$authorID]>$slashOption[amount];
           {
             "embeds":"{newEmbed:{color:#DC143C}{description:Bro you don't have that amount}}",
-            "ephemeral":true,"options":{"interaction":true}
+            "ephemeral":true,
+            "options":{"interaction":true}
           }
         ]
         $onlyIf[$checkContains[$slashOption[amount];-]==false;
           {
             "embeds":"{newEmbed:{color:#DC143C}{description:Why ya tryna use negative numbers?}}",
-            "ephemeral":true,"options":{"interaction":true}
+            "ephemeral":true,
+            "options":{"interaction":true}
           }
         ]
 
         
-      $endif
+      ]
 
       
       $onlyIf[$slashOption[amount]==all||$slashOption[amount]==max||$isNumber[$slashOption[amount]]==true;
@@ -101,9 +102,8 @@ module.exports = [
     name:"bank",// withdraw
     type:"interaction",
     prototype:"slash",
-    $if:"v4",
     code:`
-      $if[$isNumber[$slashOption[amount]]==false]
+      $if[$isNumber[$slashOption[amount]]==false;
 
 
         $setGlobalUserVar[bank;$sub[$getGlobalUserVar[bank;$authorID];$getGlobalUserVar[bank;$authorID]];$authorID]
@@ -116,10 +116,10 @@ module.exports = [
             {footer:bank is powr}
             {image:https://akket.com/wp-content/uploads/2018/08/Bank-voronezh-52.jpg}
           }
-        ]
+        ;;;everyone]
 
         
-      $else
+      ;
 
 
         $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$slashOption[amount]]]
@@ -132,7 +132,7 @@ module.exports = [
             {footer:bank is powr}
             {image:https://akket.com/wp-content/uploads/2018/08/Bank-voronezh-52.jpg}
           }
-        ]
+        ;;;everyone]
         $onlyIf[$getGlobalUserVar[bank;$authorID]>$slashOption[amount];
           {
             "embeds":"{newEmbed:{color:#DC143C}{description:Bro you don't have that amount}}",
@@ -147,7 +147,7 @@ module.exports = [
         ]
 
         
-      $endif
+      ]
 
       
       $onlyIf[$slashOption[amount]==all||$slashOption[amount]==max||$isNumber[$slashOption[amount]]==true;
