@@ -6,7 +6,7 @@ module.exports = [{
   aliases: "job",
   description:`work a day job for your paycheck of $coin100 to $coin500! \`30 Minute Cooldown\``,
   code: `
-    $if[$randomText[work;workf]==work;
+    $ifAwaited[$randomText[work;workf]==work;
 
       $author[1;Nice Work;$authorAvatar]
       $description[1;<@$authorID> works as a **$randomText[Tailor;Farmer;Gamer;Youtuber;Twitch Streamer;Discord Mod;Teacher;Chef;Servant;Pilot;Police;Miner;Construction Worker]** and earn  <:coinz:887529170316460043>**$random[100;500]**.]
@@ -21,7 +21,7 @@ module.exports = [{
       $color[1;1;FF0000]
 
     ]
-    $if[$getGlobalUserVar[supremeFlexPoster;$authorID]>=1;
+    $ifAwaited[$getGlobalUserVar[supremeFlexPoster;$authorID]>=1;
       $setGlobalUserVar[supremeFlexPoster;$sum[$getGlobalUserVar[supremeFlexPoster;$authorID];$random[200;600]];$authorID]
       $addField[1;FS Poster Bonus;+<:coinz:887529170316460043>**$random[200;600]**]
       ;]
@@ -55,7 +55,7 @@ $globalCooldown[1m;Your Cooldown for searching is **%time%**. _Default cooldown 
   name:"build",
   description:"Build structures for some more cash! `5 Minute Cooldown`. `50% chance of failure`",
   code: `
-    $if[$randomText[dworked;worked;]==worked;
+    $ifAwaited[$randomText[dworked;worked;]==worked;
       $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;1000]];$authorID]
       $setGlobalUserVar[Brick;$sub[$getGlobalUserVar[Brick;$authorID];50];$authorID]
       $username built a **$randomText[Mansion;Shack;House;Pool;Apartment;a fricking window;Garden;Garage;Extra room for his/her mom]** worth  $coin**$random[100;1000]**
@@ -96,7 +96,7 @@ $globalCooldown[1m;Your Cooldown for searching is **%time%**. _Default cooldown 
     aliases:["gamble max","bet all","bet max"],
     code:
     `
-      $if[$randomText[gab;ged]==ged;
+      $ifAwaited[$randomText[gab;ged]==ged;
 
         $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$getGlobalUserVar[money;$authorID]];$authorID]
         $title[1;You did some illegal gambling]
@@ -127,7 +127,7 @@ $globalCooldown[1m;Your Cooldown for searching is **%time%**. _Default cooldown 
     aliases:"bet",
     code:
       `
-        $if[$randomText[gab;ged]==ged;
+        $ifAwaited[$randomText[gab;ged]==ged;
 
           $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$message];$authorID]
           $title[1;You did some illegal gambling]
@@ -161,11 +161,11 @@ $globalCooldown[1m;Your Cooldown for searching is **%time%**. _Default cooldown 
   description:"Commit a crime, `3 Minute Cooldown`",
   code:
     `
-      $if[$getGlobalUserVar[money;$authorID]<100;
+      $ifAwaited[$getGlobalUserVar[money;$authorID]<100;
         $title[1;**Failed to commit a crime!**]
         $description[1;Your wallet must have $coin100 or more to commit a crime]
       ;
-        $if[$randomText[success;fail]==fail;
+        $ifAwaited[$randomText[success;fail]==fail;
 
           $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];$random[500;1000]];$authorID]
           $color[1;c20707]
@@ -190,16 +190,16 @@ $globalCooldown[1m;Your Cooldown for searching is **%time%**. _Default cooldown 
   aliases:"steal",
   code:
     `
-      $if[$mentioned[1]==$authorID;
+      $ifAwaited[$mentioned[1]==$authorID;
         You robbed $coin**$getGlobalUserVar[money;$authorID]** from yourself, Are you really that lonely?
       ;
 
-        $if[$getGlobalUserVar[shieldHP;$mentioned[1]]>0;
+        $ifAwaited[$getGlobalUserVar[shieldHP;$mentioned[1]]>0;
           This user has a shield! so you cant rob them lol. But you did damage their shield by **$random[1;$getGlobalUserVar[shieldHP;$mentioned[1]]]%**!
           $setGlobalUserVar[shieldHP;$sub[$getGlobalUserVar[shieldHP;$mentioned[1]];$random[1;$getGlobalUserVar[shieldHP;$mentioned[1]]]];$mentioned[1]]
         ;
 
-          $if[$randomText[rob;bor]==rob;
+          $ifAwaited[$randomText[rob;bor]==rob;
             $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$mentioned[1]];$random[0;$getGlobalUserVar[money;$mentioned[1]]]];$mentioned[1]]
             $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[0;$getGlobalUserVar[money;$mentioned[1]]]];$authorID]
             You successfully robbed $coin**$random[0;$getGlobalUserVar[money;$mentioned[1]]]** from <@$mentioned[1]>. Lmaoooo

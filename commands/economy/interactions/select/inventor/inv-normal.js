@@ -24,7 +24,7 @@ module.exports = [
           {selectMenuOptions:Packs:packs:openable packages}
         }
       }
-        ;;;everyone]
+        ;;everyone]
     $onlyIf[$interactionData[values[0]]==shield;]
     `
   },{
@@ -49,7 +49,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-        ;;;everyone]
+        ;;everyone]
       $onlyIf[$interactionData[values[0]]==badges;]
     `
   },{
@@ -87,7 +87,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-        ;;;everyone]
+        ;;everyone]
       $onlyIf[$interactionData[values[0]]==items;]
     `
   },{
@@ -124,7 +124,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-        ;;;everyone]
+        ;;everyone]
       $onlyIf[$interactionData[values[0]]==food;]
     `
   },{
@@ -151,7 +151,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-        ;;;everyone]
+        ;;everyone]
       $onlyIf[$interactionData[values[0]]==packs;]
     `
   }

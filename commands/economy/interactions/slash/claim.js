@@ -41,7 +41,7 @@ module.exports = [
             yes
           }
         }
-      ;;;;no]
+      ;;;everyone]
       
       $advanceCooldown[1d;daily;
         {
@@ -81,7 +81,7 @@ module.exports = [
             yes
           }
         }
-      ;;;;no]
+        ;;;everyone]
       $advanceCooldown[1h;hourly;
         {
           "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
@@ -121,7 +121,7 @@ module.exports = [
             yes
           }
         }
-      ;;;;no]
+        ;;;everyone]
       $advanceCooldown[30d;monthly;
         {
           "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
@@ -162,7 +162,7 @@ module.exports = [
             yes
           }
         }
-      ;;;;no]
+        ;;;everyone]
       $advanceCooldown[69m;sixnine;
         {
           "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",

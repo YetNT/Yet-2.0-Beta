@@ -41,7 +41,7 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $if[$isNumber[$slashOption[amount]]==false;
+      $ifAwaited[$isNumber[$slashOption[amount]]==false;
 
         
         $setGlobalUserVar[money;$sub[$getGlobalUserVar[money;$authorID];$getGlobalUserVar[money;$authorID]];$authorID]
@@ -103,7 +103,7 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $if[$isNumber[$slashOption[amount]]==false;
+      $ifAwaited[$isNumber[$slashOption[amount]]==false;
 
 
         $setGlobalUserVar[bank;$sub[$getGlobalUserVar[bank;$authorID];$getGlobalUserVar[bank;$authorID]];$authorID]

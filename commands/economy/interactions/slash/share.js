@@ -33,7 +33,7 @@ module.exports = [
           {color:YELLOW}
           {description: You gave <@$slashOption[user]> $coin**$slashOption[amount]**}
         }
-      ;;;;no]
+      ;;;everyone]
 
       $onlyIf[$slashOption[user]!=$authorID;
         {

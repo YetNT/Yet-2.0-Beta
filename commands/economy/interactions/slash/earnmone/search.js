@@ -96,7 +96,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched their bedroom}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -126,7 +126,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched their bathroom}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -155,7 +155,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched outside}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -187,7 +187,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched the backrooms}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -217,7 +217,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched their Gmail inbox}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -247,7 +247,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched a laundromat}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -278,7 +278,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched a vending machine}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -306,7 +306,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched a till at a shop}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -334,7 +334,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched their discord notifications}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -362,7 +362,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched yet's server}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -391,7 +391,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched the microscopic world}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -419,7 +419,7 @@ module.exports = [
           {color:#6495ED}
           {footer:$username searched $randomText[their;a] school campus}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -448,7 +448,7 @@ module.exports = [
           }
           {color:#6495ED}{footer:$username searched the fridge}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -467,10 +467,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched twitter}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -489,10 +496,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched the trash}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -511,10 +525,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched a video rental store}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -533,10 +554,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched an eyephone store}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -555,10 +583,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched the Space Time Continuum}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -577,10 +612,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched a black hole}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -599,10 +641,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched the docs}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -621,10 +670,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched $randomText[their;a] pencil case}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {
@@ -643,10 +699,17 @@ module.exports = [
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
-          {description:}
-          {color:#6495ED}{footer:$username searched }
+          {description:
+            $randomText[
+              ;
+              ;
+              ;
+              ;
+            ]
+          }
+          {color:#6495ED}{footer:$username searched $randomText[their;a] kidney}
         }
-      ]
+      ;;;everyone]
       
       $advanceCooldown[1s;search;
         {

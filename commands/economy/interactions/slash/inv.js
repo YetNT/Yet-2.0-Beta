@@ -11,7 +11,12 @@ module.exports = [
     name:"User Inventory",
     code:`
       $setUserVar[user;$interactionData[targetId]]
-      $interactionReply[e;;
+      $interactionReply[;
+        {newEmbed:
+          {title:$username[$interactionData[targetId]]'s Inventory}
+          {description:Click the select menu to get started!}
+        }
+      ;
         {actionRow:
           {selectMenu:INVid2:Inventory:1:1:no:
             {selectMenuOptions:Shield:shield:shield status and shield hp}
@@ -21,13 +26,18 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-      ;;;yes]`
+      ;;everyone]`
   },{
     name:"inventory",
     type:"interaction",
     prototype:"slash",
     code:`
-      $interactionReply[e;;
+      $interactionReply[;
+        {newEmbed:
+          {title:Your Inventory}
+          {description:Click the select menu to get started!}
+        }
+      ;
         {actionRow:
           {selectMenu:INVid:Inventory:1:1:no:
             {selectMenuOptions:Shield:shield:shield status and shield hp}
@@ -37,7 +47,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-      ]
+      ;;everyone]
     `
     // in normal - $addSelectMenu[1;INVid;Inventory;1;1;no;Shield:shield status and shield hp:shield:no;Badges:b a d g e s:badges:no;Items/Other Materials/Rare:main, other and rare itmes:items:no;Food/Utensils:f o o d:food:no;Packs:openable packges:packs:no]
   }

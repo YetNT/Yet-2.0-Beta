@@ -3,9 +3,8 @@ module.exports = {
   type:"interaction",
   prototype:"slash",
   name:"balance",
-  $if:"v4",
   code:`
-    $if[$interactionData[options.data[0].value]!=undefined]
+    $ifAwaited[$interactionData[options.data[0].value]!=undefined;
       $interactionReply[bal;
         {newEmbed:
           {title:$username[$interactionData[options.data[0].value]]'s Balance}
@@ -14,8 +13,8 @@ module.exports = {
           {field:Bank:$numberSeparator[$getGlobalUserVar[bank;$interactionData[options.data[0].value]];,]:no}
           {footer:Global Leaderboard Position #COLON# $getLeaderboardInfo[money;$interactionData[options.data[0].value];globaluser;top]}
         }
-      ;;;;no]
-    $else
+      ;;;everyone]
+    ;
       $interactionReply[bal;
         {newEmbed:
           {title:$username[$authorID]'s Balance}
@@ -24,7 +23,7 @@ module.exports = {
           {field:Bank:$numberSeparator[$getGlobalUserVar[bank;$authorID];,]:no}
           {footer:Global leaderboard Position #COLON# $getLeaderboardInfo[money;$authorId;globaluser;top]}
         }
-      ;;;;no]
-    $endif
+      ;;;everyone]
+    ]
   `
 }

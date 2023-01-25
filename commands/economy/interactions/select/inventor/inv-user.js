@@ -24,7 +24,7 @@ module.exports = [
           {selectMenuOptions:Packs:packs:openable packages}
         }
       }
-    ;;;;yes]
+    ;;everyone]
     $onlyIf[$interactionData[values[0]]==shield;]
     `
   },{
@@ -49,7 +49,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-      ;;;;yes]
+      ;;everyone]
       $onlyIf[$interactionData[values[0]]==badges;]
     `
   },{
@@ -87,7 +87,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-      ;;;;yes]
+      ;;everyone]
       $onlyIf[$interactionData[values[0]]==items;]
     `
   },{
@@ -123,7 +123,7 @@ module.exports = [
             {selectMenuOptions:Food/Utensils:food:f o o d}
             {selectMenuOptions:Packs:packs:openable packages}
         }
-      ;;;;yes]
+      ;;everyone]
       $onlyIf[$interactionData[values[0]]==food;]
     `
   },{
@@ -150,7 +150,7 @@ module.exports = [
             {selectMenuOptions:Packs:packs:openable packages}
           }
         }
-      ;;;;yes]
+      ;;everyone]
       $onlyIf[$interactionData[values[0]]==packs;]
     `
   }
