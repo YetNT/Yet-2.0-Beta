@@ -32,7 +32,7 @@ module.exports = [
           }
           {fields:
             Premium Bonus,
-            $if[$getGlobalUserVar[premium;$authorID]==1;
+            $ifAwaited[$getGlobalUserVar[premium;$authorID]==1;
               $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];50000];$authorID]
               Premium Bonus = **50000** :gem:
             ;
@@ -44,10 +44,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1d;daily;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$interactionData[options._subcommand]==daily;]
     `
@@ -72,7 +71,7 @@ module.exports = [
           }
           {fields:
             Premium Bonus,
-            $if[$getGlobalUserVar[premium;$authorID]==1;
+            $ifAwaited[$getGlobalUserVar[premium;$authorID]==1;
               $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];1000];$authorID]
               Premium Bonus = **1000** :gem:
             ;
@@ -83,10 +82,9 @@ module.exports = [
         }
         ;;;everyone]
       $advanceCooldown[1h;hourly;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$interactionData[options._subcommand]==hourly;]
     `
@@ -112,7 +110,7 @@ module.exports = [
           }
           {fields:
             Premium Bonus,
-            $if[$getGlobalUserVar[premium;$authorID]==1;
+            $ifAwaited[$getGlobalUserVar[premium;$authorID]==1;
               $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];10000];$authorID]
               Premium Bonus = $coin**10000**
             ;
@@ -123,10 +121,9 @@ module.exports = [
         }
         ;;;everyone]
       $advanceCooldown[30d;monthly;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       
       $onlyIf[$interactionData[options._subcommand]==monthly;]
@@ -153,7 +150,7 @@ module.exports = [
           }
           {fields:
             Premium Bonus,
-            $if[$getGlobalUserVar[premium;$authorID]==1;
+            $ifAwaited[$getGlobalUserVar[premium;$authorID]==1;
               $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];10000];$authorID]
               Premium Bonus = $coin**10000**
             ;
@@ -164,10 +161,9 @@ module.exports = [
         }
         ;;;everyone]
       $advanceCooldown[69m;sixnine;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** for the next reward}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       
       $onlyIf[$interactionData[options._subcommand]==69minutely;]

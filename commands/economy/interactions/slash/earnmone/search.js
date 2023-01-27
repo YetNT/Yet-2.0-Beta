@@ -129,10 +129,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==bathroom;]
     `
@@ -190,10 +189,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==backrooms;]
     `
@@ -220,10 +218,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==gmail;]
     `
@@ -250,10 +247,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==laundromat;]
     `
@@ -281,10 +277,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==vending;]
     `
@@ -309,10 +304,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==till;]
     `
@@ -337,10 +331,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==notifs;]
     `
@@ -365,10 +358,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==server_ad;]
     `
@@ -394,10 +386,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==mw;]
     `
@@ -422,10 +413,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==school;]
     `
@@ -451,10 +441,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==fridge;]
     `
@@ -480,10 +469,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==twitter;]
     `
@@ -509,10 +497,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==trash;]
     `
@@ -538,10 +525,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==rent;]
     `
@@ -567,10 +553,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==iphone;]
     `
@@ -596,10 +581,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==stc;]
     `
@@ -625,10 +609,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==black;]
     `
@@ -654,10 +637,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==ddd;]
     `
@@ -683,10 +665,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==pencil;]
     `
@@ -712,10 +693,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==kidney;]
     `

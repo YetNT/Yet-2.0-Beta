@@ -36,16 +36,14 @@ module.exports = [
       ;;;everyone]
 
       $onlyIf[$slashOption[user]!=$authorID;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Ping someone else. Not yourself bruh}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Ping someone else. Not yourself.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$getGlobalUserVar[money;$authorID]>$slashOption[amount];
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Nice you don't have $coin**$slashOption[amount]**}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Nice you don't have $coin**$slashOption[amount]**}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
     `
   }
