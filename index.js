@@ -14,6 +14,8 @@ const bot = new aoijs.AoiClient({
   intents: ["MessageContent", "Guilds", "GuildMessages"]
 });
 
+const { setup } = require('aoi.parser');
+setup(aoijs.Util);
 
 bot.onMessage();
 bot.onInteractionCreate();
