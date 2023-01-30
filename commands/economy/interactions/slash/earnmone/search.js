@@ -704,16 +704,15 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[
-              ;
-              ;
-              ;
-              ;
+            $ifAwaited[$randomText[w;l]==w;
+              $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[4;200]];$authorID]
+              Cool, you find **$random[4;200] Gems**$ifAwaited[$randomText[their;a]==their;... in your kideny?; in a kidney!..] 
+            ;
+              Cool, you find, wait no those are just kidney stones.
             ]
           }
           {color:#6495ED}{footer:$username searched $randomText[their;a] kidney}
