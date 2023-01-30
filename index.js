@@ -27,7 +27,22 @@ bot.functionManager.createFunction({
   type : 'aoi.js',
   code : `<:coinz_yet20:887529170316460043>`
 })
-
+bot.functionManager.createFunction({
+  name : '$badWord', //FUNCTION NAME 
+  type : 'djs', //TYPE METHOD
+  code :  async d => {//FETCHING DATA AS D
+        
+    const data = d.util.aoiFunc(d)
+    const clientel = d.util.client
+    const [userid,params] = data.inside.splits;//GETTING THE PARAMETERS
+        
+    const user = await d.util.getUser(d, userid) // THIS IS THE CODE INSIDE
+    clientel.send(params);//YOU CAN CHANGE THIS AS PER YOUR REQUIREMENTS
+        
+    return {
+      code: d.util.setCode(data)
+    }}
+})
 bot.functionManager.createFunction({
   name : '$badgeGetNonEph',
   params: ["badgeEmojiName", "badgeVar", "badgeEmojiID"],

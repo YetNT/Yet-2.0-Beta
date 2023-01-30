@@ -99,10 +99,9 @@ module.exports = [
       ;;;everyone]
       
       $advanceCooldown[1s;search;
-        {
-          "embeds":"{newEmbed:{color:#DC143C}{description:Sorry, wait **%time%** before searching again.}}",
-          "ephemeral":true,"options":{"interaction":true}
-        }
+          {newEmbed:{color:#DC143C}{description:Sorry wait **%time%** before searching again.}}
+          {options:{ephemeral}}
+          {extraOptions:{interaction}}
       ]
       $onlyIf[$slashOption[search]==bedroom;]
     `
@@ -115,13 +114,16 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[
-              $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID] You found **$random[50;100] Gems** in the toilet. ew bro;
-              $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID] You walked into the bathroom and stepped on **$random[50;100] Gems**, nice;
-              $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[5;10]];$authorID] You searched, searched, searched and searched. Only to find **$random[5;10] Gems** in the whole bathroom. It was not worth it.;
-              You were searching for some gems then tripped on some leaking soap, fell into the bathtub, got strangled by the shower clothing line, and if you watched the movie you know the rest.;
-              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[5;100]];$authorID] No luck. You just found some hair in the sink, an open toilet seat and $coin**$random[5;100]**
-            ]  
+            $ifAwaited[$randomText[w;l]==w;
+              $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[5;100]];$authorID]
+              $randomText[
+                You found **$random[5;100] Gems** in the toilet. ew bro;
+                You walked into the bathroom and stepped on **$random[5;100] Gems**, nice;
+                You searched, searched, searched and searched. Only to find **$random[5;100] Gems** in the whole bathroom. It was not worth it.;
+              ]
+            ;
+              You were searching for some gems then tripped on some leaking soap, fell into the bathtub, got strangled by the shower clothing line, and if you watched the movie you know the rest.
+            ]
           }
           {color:#6495ED}
           {footer:$username searched their bathroom}
@@ -144,11 +146,25 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[ 
-              You tripped on some moss while searching outside. At least you touched grass for once.;
-              $setGlobalUserVar[Rock;$sum[$getGlobalUserVar[Rock;$authorID];$random[20;40]];$authorID] You found **$random[20;40] Rocks** from the ground. Worth it?;
-              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[100;700]];$authorID] You stepped outside for the first time in 40 years. God was so impressed with you that he blessed you with $coin**$random[100;700]**. Wonderful.;
-              You were about to step outside your door, but the sun burnt your skin while you were walking out so nah.
+            $ifAwaited[$randomText[w;l]==w;
+              $ifAwaited[$randomText[rock;money]==rock;
+                $setGlobalUserVar[Rock;$sum[$getGlobalUserVar[Rock;$authorID];$random[2;40]];$authorID]
+                $randomText[
+                  You went outside and collected **$random[2;40] Rocks**... Well that's one way of spending your free time;
+                  While you were searching outside, a kid threw **$random[2;40] Rocks** at you. $ifAwaited[$random[2;40]>10;That's gotta hurt;You walked it off.]
+                ]
+              ;
+                $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[10;200]];$authorID]
+                $randomText[
+                  Just for walking outside, God has gifted you $coin**$random[10;200]**.;
+                  \`i've been writing these responses for search for so long i'm just going to give you the coins and go outside myself.\` **+$coin$random[10;200]**
+                ]
+              ]
+            ;
+              $randomText[
+                As you took 1 step outside the door you heard a discord ping. Well at least you tried going outside;
+                While searching outside, you tripped on some mossy cobblestone, dropping all you rocks you collected! Lol.
+              ]
             ]
           }
           {color:#6495ED}
