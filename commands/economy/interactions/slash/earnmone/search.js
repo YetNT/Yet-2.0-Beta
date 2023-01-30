@@ -189,14 +189,26 @@ module.exports = [
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[
-              WOW, you found $coin**$random[10;9000]** AND **$random[2;500] Gems**! Nice! but wait... you can't find the exit...
-              You've been walking for 6 hours now. I don't know how you'll find the exit
-              You encounter an entity which kills you and you loose everthing you found. Depressing.;
-              $setGlobalUserVar[Rock;$sum[$getGlobalUserVar[Rock;$authorID];$random[10;1000]];$authorID] $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[2;345]];$authorID] Wtf you found **$random[10;1000] Rocks** and $coin**$random[2;345]**. I won't even ask how you found bricks in the backrooms;
-              You try noclipping through manythings but you couldn't figure it out. ;
-              Backrooms is closed today.;
-              You encountered an entity right before reaching the exit. You died, but didn't find anything anyways.
+            $ifAwaited[$randomText[w;l]==w;
+              $ifAwaited[$randomText[brick;money]==brick;
+                $setGlobalUserVar[Brick;$sum[$getGlobalUserVar[Brick;$authorID];$random[8;170]];$authorID]
+                With the pickaxe you noclipped into the backroooms with, you manage to break some of the walls, ending you up with a total of **$random[8;170] Bricks**
+              ;
+                $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[10;10000]];$authorID]
+                $randomText[
+                  You ransack the pockets of a deceased person in the backrooms, you find about $coin**$random[10;10000]**;
+                  Backrooms level 793. You earn money from the stock exhange : $coin**$random[10;10000]**
+                ]
+              ]
+            ;
+              $randomText[
+                WOW, you found $coin**$random[10;9000]** AND **$random[2;500] Gems**! Nice! but wait... you can't find the exit...
+                You've been walking for 6 hours now. I don't know how you'll find the exit
+                You encounter an entity which kills you and you loose everthing you found. Depressing.;
+                You try noclipping through manythings but you couldn't figure it out.;
+                Backrooms is closed today.;
+                You encountered an entity right before reaching the exit. You died, but didn't find anything anyways.
+              ]
             ]
           }
           {color:#6495ED}
