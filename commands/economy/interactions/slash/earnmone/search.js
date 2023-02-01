@@ -676,16 +676,33 @@ module.exports = [
     type:"interaction",
     prototype:"slash",
     code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
+      
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[
+            $ifAwaited[$randomText[w;l]==w;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[10;100000]];$authorID]
+              $ifAwaited[$randomText[their;a]==their;
+                You find $coin**$random[10;100000]** in your friend's pencil case. dang
               ;
+                $randomText[
+                  You find $coin**$random[10;100000]** in your pencil case. $ifAwaited[$random[10;100000]>1000;So poor lmao;How are you so rich?];
+                  Your pencil case contained $coin**$random[10;100000]**
+                ]
+              ]
+            ;
+              $ifAwaited[$randomText[their;a]==their;
+                $randomText[
+                  Your friend's pencil case had a mouse trap. Ouch!;
+                  This pencil case has nothing... no pens... no highlighters... nothing :skull:
+                ]
               ;
-              ;
-              ;
+                $randomText[
+                  Did you forget that you're broke?;
+                  You find some cash!!... in your sharpener
+                ]
+              ]
             ]
           }
           {color:#6495ED}{footer:$username searched $randomText[their;a] pencil case}
@@ -712,7 +729,7 @@ module.exports = [
               $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[4;200]];$authorID]
               Cool, you find **$random[4;200] Gems**$ifAwaited[$randomText[their;a]==their;... in your kideny?; in a kidney!..] 
             ;
-              Cool, you find, wait no those are just kidney stones.
+              Cool, you find.. wait no those are just kidney stones.
             ]
           }
           {color:#6495ED}{footer:$username searched $randomText[their;a] kidney}
