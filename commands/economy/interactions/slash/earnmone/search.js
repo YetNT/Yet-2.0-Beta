@@ -647,17 +647,23 @@ module.exports = [
     name:"search",
     type:"interaction",
     prototype:"slash",
-    code:`
-      $setGlobalUserVar[Gem;$sum[$getGlobalUserVar[Gem;$authorID];$random[50;100]];$authorID]
+    code:` 
       $interactionReply[;
         {newEmbed:
           {title:$username's Search Results}
           {description:
-            $randomText[
-              ;
-              ;
-              ;
-              ;
+            $ifAwaited[$randomText[w;l]==w;
+              $setGlobalUserVar[money;$sum[$getGlobalUserVar[money;$authorID];$random[1;100000]];$authorID]
+              $randomText[
+                As you read the history of discord's Game SDK guide, you find $coin**$random[1;100000]** along some c++ files, cool?;
+                As you finish reading the interaction command documentation and writing the replies to your application command for your economy bot, discord rewards you for not only reading all of it, but having close 1k+ lines! **+**$coin**$random[1;100000]**. [No joke. This is 1k+ lines for one command](https://github.com/Yetity/Yet-2.0-Beta/blob/main/commands/economy/interactions/slash/earnmone/search.js)
+              ]
+            ;
+              $randomText[
+                You could not understand #### that you saw in the intro, so you just gave up;
+                Before you read the docs you realise... how the hell do you get coins from a typed out documentation? Idiot
+              ]
+            
             ]
           }
           {color:#6495ED}{footer:$username searched the docs}
