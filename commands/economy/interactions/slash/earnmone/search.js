@@ -663,7 +663,6 @@ module.exports = [
                 You could not understand #### that you saw in the intro, so you just gave up;
                 Before you read the docs you realise... how the hell do you get coins from a typed out documentation? Idiot
               ]
-            
             ]
           }
           {color:#6495ED}{footer:$username searched the docs}
